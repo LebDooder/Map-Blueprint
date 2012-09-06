@@ -162,24 +162,24 @@ local mapinfo = {
 		repeatX = 0.0,
 		repeatY = 0.0,
 
-		absorb    = {0.0, 0.0, 0.0},
-		baseColor = {0.0, 0.0, 0.0},
-		minColor  = {0.0, 0.0, 0.0},
+		absorb    = {0.004, 0.004, 0.002},
+		baseColor = {0.4, 0.6, 0.8},
+		minColor  = {0.1, 0.1, 0.23},
 
-		ambientFactor  = 1.0,
-		diffuseFactor  = 1.0,
-		specularFactor = 1.0,
-		specularPower  = 20.0,
+		ambientFactor  = 1.3,
+		--diffuseFactor  = 1.0,
+		specularFactor = 0.5,
+		specularPower  = 2.0,
 
-		planeColor = {0.0, 0.4, 0.0},
+		--planeColor = {0.0, 0.0, 0.0},
 
-		surfaceColor  = {0.75, 0.8, 0.85},
-		surfaceAlpha  = 0.55,
+		surfaceColor  = {0.65, 0.7, 0.75},
+		surfaceAlpha  = 0.01,
 		diffuseColor  = {1.0, 1.0, 1.0},
 		specularColor = {0.5, 0.5, 0.5},
 
-		fresnelMin   = 0.2,
-		fresnelMax   = 0.8,
+		fresnelMin   = 0.3,
+		fresnelMax   = 1.0,
 		fresnelPower = 4.0,
 
 		reflectionDistortion = 1.0,
