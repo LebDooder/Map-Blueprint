@@ -11,5 +11,5 @@ if mapinfo.smf.minheight and mapinfo.smf.maxheight then
 	mapinfo.smf.minheight = max
 	mapinfo.smf.maxheight = min
 else
-	Spring.Echo("Error mapinfo.lua: InvertedHeightmap selected but smf.minheight and/or smf.maxheight are unset!")
+	Spring.Echo("Error mapinfo.lua: InvertedHeightmap selected but minheight and/or maxheight are not set in mapinfo.lua")
 end
