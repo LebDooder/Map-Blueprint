@@ -47,6 +47,13 @@ local options = {
 		desc = '',
 		type = 'section',
 	},
+	
+	{
+		key = 'Features',
+		name = 'Feature Settings',
+		desc = '',
+		type = 'section',
+	},
 
 --// Options
 	--// Atmosphere
@@ -60,7 +67,7 @@ local options = {
 		items = {
 			{ key = "dawn",  name = "Dawn",  desc = "Day Time" },
 			{ key = "day",   name = "Day",   desc = "Day Time" },
-			{ key = "night", name = "Night", desc = "Night Time" }
+			{ key = "night", name = "Night", desc = "Night Time" },
 		},
 	},
 	
@@ -70,7 +77,7 @@ local options = {
 		desc = "covers the map under a gray mist (can be slow on older hardware)",
 		type = 'bool',
 		section = 'Atmosphere',
-		def  = true,
+		def  = false,
 	},
 	
 	{
@@ -82,7 +89,8 @@ local options = {
 		section = 'Atmosphere',
 		items = {
 			{ key = "clear", name = "Clear", desc = "no weather" },
-			{ key = "snow", name = "Snowing", desc = "snowy day" }
+			{ key = "snow", name = "Snowing", desc = "snowy day" },
+			{ key = "rain", name = "Raining", desc = "rainy day" },
 		},
 	},
 
@@ -96,6 +104,30 @@ local options = {
 		def = false,
 	},
 
+	{
+		key = 'wlevel',
+		name = 'water level (minheight)',
+		desc = "Water level (default is 94)",	--map specific, don't forget to change
+		type    = 'number',
+		section = 'terrain',
+		def     = 94,							--
+		min     = 1,							--
+		max     = 435,							--
+		step    = 1,
+	},
+
+	{
+		key = 'acid',
+		name = 'Acidic Water',
+		desc = "Want water to damage units?",
+		type    = 'number',
+		section = 'terrain',
+		def     = 0,
+		min     = 0,
+		max     = 10000,
+		step    = 10,
+	},
+	
 	--// Economy
 	{
 		key  = 'metal',
@@ -149,6 +181,21 @@ local options = {
 		min     = 1,
 		max     = 10000,
 		step    = 1,
+	},
+	
+	--//Features
+	{
+		key   = 'featureset',
+		name  = 'Features',
+		desc  = 'assorted feature options',
+		type  = 'list',
+		section = 'features',
+		def   = 'normal',
+		items = {
+			{ key = 'dry', name = "Dry", desc = "Features appear where water was(only of dry)" },
+			{ key = 'normal', name = "Normal", desc = "Default feature placement" },
+			{ key = 'low', name = "Low end", desc = "Features for low end comps" },
+		},
 	},
 }
 
